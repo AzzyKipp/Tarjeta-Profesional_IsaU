@@ -32,9 +32,13 @@
       "camera": {
         "type": "perspective",
         "xr": {
-          "desktop": "3D",
-          "xrCameraType": "3dOnly",
-          "headset": "disabled"
+          "desktop": "disabled",
+          "xrCameraType": "world",
+          "headset": "disabled",
+          "phone": "AR",
+          "world": {
+            "disableWorldTracking": true
+          }
         }
       },
       "components": {},
@@ -90,12 +94,12 @@
       "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
       "order": 0.6644431107322474
     },
-    "128de837-8f74-47c7-91f3-60c77bae59b9": {
-      "id": "128de837-8f74-47c7-91f3-60c77bae59b9",
+    "00dd7e81-70a1-4ad3-a767-9d9110aa1583": {
+      "id": "00dd7e81-70a1-4ad3-a767-9d9110aa1583",
       "position": [
-        -0.043320320142697155,
+        0.010951257733577469,
         0,
-        0.0328345375655994
+        -0.02896408250199317
       ],
       "rotation": [
         0,
@@ -115,13 +119,69 @@
       "gltfModel": {
         "src": {
           "type": "asset",
-          "asset": "assets/Azzy.glb"
+          "asset": "assets/AvatarAnimada.glb"
         },
-        "animationClip": "",
+        "animationClip": "Dance",
         "loop": true
       },
-      "name": "Azzy.glb",
-      "order": 2.6779255875846566
+      "name": "AvatarAnimada.glb",
+      "order": 4.071281414467553
+    },
+    "f0edf0f2-d8f5-4dee-9723-ca738dc516a5": {
+      "id": "f0edf0f2-d8f5-4dee-9723-ca738dc516a5",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "components": {},
+      "name": "Objetivo de la imagen",
+      "imageTarget": {
+        "name": ""
+      },
+      "order": 1.9927054114271705,
+      "prefab": true
+    },
+    "505541f4-dc71-4160-bff3-8aefbcc078f1": {
+      "id": "505541f4-dc71-4160-bff3-8aefbcc078f1",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {},
+      "name": "Objetivo de la imagen",
+      "imageTarget": {
+        "name": "objetivo_profe"
+      },
+      "order": 5.399851670007906
     }
   },
   "spaces": {
