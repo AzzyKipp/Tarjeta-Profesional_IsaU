@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 61,
+    "left": 0,
+    "width": 686,
+    "height": 914,
+    "isRotated": false,
+    "originalWidth": 686,
+    "originalHeight": 1038
+  },
+  "imagePath": "image-targets/TarjetaAzzy_luminance.jpg",
+  "metadata": null,
+  "name": "TarjetaAzzy",
+  "resources": {
+    "originalImage": "TarjetaAzzy_original.jpg",
+    "croppedImage": "TarjetaAzzy_cropped.jpg",
+    "thumbnailImage": "TarjetaAzzy_thumbnail.jpg",
+    "luminanceImage": "TarjetaAzzy_luminance.jpg"
+  },
+  "created": 1786552456618,
+  "updated": 1786552456618
+}

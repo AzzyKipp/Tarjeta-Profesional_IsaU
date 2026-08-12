@@ -48,11 +48,11 @@
       "name": "Camera",
       "position": [
         0,
-        2,
-        3
+        3.70856540439432,
+        -1.7613678248193478
       ],
       "rotation": [
-        0.0004436887233141012,
+        0.00044368872331410124,
         0.9659425615285845,
         -0.25875089860082223,
         0.0016563336561801576
@@ -98,14 +98,14 @@
       "id": "00dd7e81-70a1-4ad3-a767-9d9110aa1583",
       "position": [
         0.010951257733577469,
-        0,
-        -0.02896408250199317
+        0.02896408250199317,
+        -6.431318256171086e-18
       ],
       "rotation": [
+        0.7071067811865475,
         0,
         0,
-        0,
-        1
+        0.7071067811865476
       ],
       "scale": [
         1,
@@ -125,7 +125,7 @@
         "loop": true
       },
       "name": "AvatarAnimada.glb",
-      "order": 4.071281414467553
+      "order": 5.968480032024043
     },
     "f0edf0f2-d8f5-4dee-9723-ca738dc516a5": {
       "id": "f0edf0f2-d8f5-4dee-9723-ca738dc516a5",
@@ -163,10 +163,10 @@
         0
       ],
       "rotation": [
+        -0.7071067811865475,
         0,
         0,
-        0,
-        1
+        0.7071067811865476
       ],
       "scale": [
         1,
@@ -179,16 +179,221 @@
       "components": {},
       "name": "Objetivo de la imagen",
       "imageTarget": {
-        "name": "objetivo_profe"
+        "name": "TarjetaAzzy"
       },
       "order": 5.399851670007906
+    },
+    "9a93fef6-980a-4260-ae96-60bd8eacd332": {
+      "id": "9a93fef6-980a-4260-ae96-60bd8eacd332",
+      "position": [
+        0,
+        2.125826228511949,
+        -5.652059325756317
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        2.9,
+        2.9,
+        2.9
+      ],
+      "geometry": {
+        "type": "plane",
+        "width": 1,
+        "height": 1
+      },
+      "material": {
+        "type": "basic",
+        "color": "#FFFFFF",
+        "textureSrc": {
+          "type": "asset",
+          "asset": "assets/video_olas.mp4"
+        }
+      },
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "df02bdc5-b17c-4786-a903-251778a07a5a": {
+          "id": "df02bdc5-b17c-4786-a903-251778a07a5a",
+          "name": "VideoButtonController",
+          "parameters": {
+            "videoEntity": {
+              "type": "entity",
+              "id": "9a93fef6-980a-4260-ae96-60bd8eacd332"
+            },
+            "playButton": {
+              "type": "entity",
+              "id": "5cc8bcb9-232a-4a43-8b1e-79d62ca718ff"
+            },
+            "pauseButton": {
+              "type": "entity",
+              "id": "bfee8786-9c03-4963-b504-11d7c83f6535"
+            }
+          }
+        }
+      },
+      "name": "VideoOlas",
+      "order": 6.951513408856263,
+      "videoControls": {
+        "paused": true
+      }
+    },
+    "5cc8bcb9-232a-4a43-8b1e-79d62ca718ff": {
+      "id": "5cc8bcb9-232a-4a43-8b1e-79d62ca718ff",
+      "position": [
+        0,
+        0,
+        0.009884440381388915
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        2.7,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "9a93fef6-980a-4260-ae96-60bd8eacd332",
+      "components": {},
+      "ui": {
+        "type": "3d",
+        "width": 100,
+        "height": 36,
+        "background": "#a1c578",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 0,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "PlayButton",
+      "order": 8.588905931234736
+    },
+    "0fa162a9-7e0a-4447-91c0-7103c4f389f1": {
+      "id": "0fa162a9-7e0a-4447-91c0-7103c4f389f1",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        2.7000000000000015,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "5cc8bcb9-232a-4a43-8b1e-79d62ca718ff",
+      "components": {},
+      "name": "Texto",
+      "ui": {
+        "width": 50,
+        "height": 14,
+        "text": "Play",
+        "color": "#ffffff",
+        "fontSize": 16
+      },
+      "order": 1.333686729544615
+    },
+    "bfee8786-9c03-4963-b504-11d7c83f6535": {
+      "id": "bfee8786-9c03-4963-b504-11d7c83f6535",
+      "position": [
+        0,
+        0,
+        0.009884440381388915
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0000000000000004,
+        2.7,
+        1.0000000000000004
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "9a93fef6-980a-4260-ae96-60bd8eacd332",
+      "components": {},
+      "ui": {
+        "type": "3d",
+        "width": 100,
+        "height": 36,
+        "background": "#a1c578",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 0,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "PauseButton",
+      "order": 9.686597152950034
+    },
+    "9587b30b-d8da-4226-a499-77ab48034593": {
+      "id": "9587b30b-d8da-4226-a499-77ab48034593",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "bfee8786-9c03-4963-b504-11d7c83f6535",
+      "components": {},
+      "name": "Texto",
+      "ui": {
+        "width": 50,
+        "height": 14,
+        "text": "Pause",
+        "color": "#ffffff",
+        "fontSize": 16
+      },
+      "order": 1.1168213961934932
     }
   },
   "spaces": {
     "88453035-dc0f-486d-868a-8ff7c2fda864": {
       "id": "88453035-dc0f-486d-868a-8ff7c2fda864",
       "name": "Default Space",
-      "activeCamera": "a608ddd9-9379-464d-966f-5d8d8674c83c"
+      "activeCamera": "a608ddd9-9379-464d-966f-5d8d8674c83c",
+      "sky": {
+        "type": "gradient",
+        "colors": [
+          "#464766",
+          "#08061F"
+        ]
+      }
     }
   },
   "entrySpaceId": "88453035-dc0f-486d-868a-8ff7c2fda864"
