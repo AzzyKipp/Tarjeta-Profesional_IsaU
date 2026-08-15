@@ -115,14 +115,21 @@
       "geometry": null,
       "material": null,
       "parentId": "505541f4-dc71-4160-bff3-8aefbcc078f1",
-      "components": {},
+      "components": {
+        "b9c3a101-5be0-4033-a02d-bdebd02f9947": {
+          "id": "b9c3a101-5be0-4033-a02d-bdebd02f9947",
+          "name": "AnimationStateController",
+          "parameters": {}
+        }
+      },
       "gltfModel": {
         "src": {
           "type": "asset",
           "asset": "assets/AvatarAnimada.glb"
         },
-        "animationClip": "Dance",
-        "loop": true
+        "animationClip": "Idle",
+        "loop": true,
+        "paused": false
       },
       "name": "AvatarAnimada.glb",
       "order": 5.968480032024043
