@@ -193,25 +193,34 @@
     "2418a900-a1a6-4208-bcbf-b55ceef70e81": {
       "id": "2418a900-a1a6-4208-bcbf-b55ceef70e81",
       "position": [
-        -2.87829755854572,
-        1.008599213971651,
-        0.09247174059902097
+        0.5652645658194073,
+        2.9299692363568868,
+        -4.416010876960201
       ],
       "rotation": [
         0,
+        -0.7132504491541822,
         0,
-        0,
-        1
+        0.7009092642998502
       ],
       "scale": [
+        1.0000000000000013,
         1,
-        1,
-        1
+        1.0000000000000013
       ],
       "geometry": null,
-      "material": null,
+      "material": {
+        "type": "basic",
+        "color": "#FFFFFF"
+      },
       "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
-      "components": {},
+      "components": {
+        "5609382b-0212-4831-9495-91913580933a": {
+          "id": "5609382b-0212-4831-9495-91913580933a",
+          "name": "PokedexVideoController",
+          "parameters": {}
+        }
+      },
       "gltfModel": {
         "src": {
           "type": "asset",
@@ -222,7 +231,9 @@
       },
       "name": "pokedex.glb",
       "order": 6.409425942160573,
-      "videoControls": {}
+      "videoControls": {
+        "loop": true
+      }
     }
   },
   "spaces": {
