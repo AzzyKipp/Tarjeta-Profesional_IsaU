@@ -239,7 +239,8 @@
       "order": 6.951513408856263,
       "videoControls": {
         "paused": true
-      }
+      },
+      "disabled": true
     },
     "5cc8bcb9-232a-4a43-8b1e-79d62ca718ff": {
       "id": "5cc8bcb9-232a-4a43-8b1e-79d62ca718ff",
