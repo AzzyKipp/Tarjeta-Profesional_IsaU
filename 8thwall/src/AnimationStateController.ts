@@ -18,14 +18,19 @@ ecs.registerComponent({
         target: eid,
       })
 
-    const dance = ecs.defineState('dance')
-      .onEnter(() => {
-        ecs.GltfModel.mutate(world, eid, (cursor) => {
-          cursor.animationClip = 'Dance'
-          cursor.loop = false
-          cursor.repetitions = 0
-          return false
-        })
-      })
+const dance = ecs.defineState('dance')
+  .onEnter(() => {
+    ecs.GltfModel.mutate(world, eid, (cursor) => {
+      cursor.animationClip = 'Dance'
+      cursor.loop = false
+      cursor.repetitions = 0
+      return false
+    })
+
+    world.events.addListener(eid, 'gltf-animation-finished', () => {
+      world.events.dispatch(eid, 'dance-finished')
+    })
+  })
+  .onEvent('dance-finished', 'idle')
   },
 })
