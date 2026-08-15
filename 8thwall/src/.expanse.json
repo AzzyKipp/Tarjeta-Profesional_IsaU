@@ -189,6 +189,40 @@
         "name": "TarjetaAzzy"
       },
       "order": 5.399851670007906
+    },
+    "2418a900-a1a6-4208-bcbf-b55ceef70e81": {
+      "id": "2418a900-a1a6-4208-bcbf-b55ceef70e81",
+      "position": [
+        2.0860966984502767,
+        -1.734723475976807e-18,
+        8.283706299658473
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/pokedex.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "pokedex.glb",
+      "order": 6.409425942160573,
+      "videoControls": {}
     }
   },
   "spaces": {
