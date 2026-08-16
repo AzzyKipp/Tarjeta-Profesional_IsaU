@@ -195,18 +195,18 @@
       "position": [
         -0.023457705317441735,
         2.8651705181402125,
-        -3.4344460744449314
+        -4.058375040431877
       ],
       "rotation": [
         0,
-        -0.6156614753256597,
+        -0.6156614753256598,
         0,
-        0.7880107536067213
+        0.7880107536067207
       ],
       "scale": [
-        1.0000000000000022,
+        1.0000000000000027,
         1,
-        1.0000000000000022
+        1.0000000000000027
       ],
       "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
       "components": {
@@ -228,7 +228,52 @@
       },
       "name": "pokedex.glb",
       "order": 6.511694782741002,
-      "videoControls": {}
+      "videoControls": {
+        "positional": false
+      }
+    },
+    "ecc43834-f386-45b7-b4cf-ca69ba04873b": {
+      "id": "ecc43834-f386-45b7-b4cf-ca69ba04873b",
+      "position": [
+        -0.8161445847317974,
+        2.1940520840876996,
+        -3.8430364607047185
+      ],
+      "rotation": [
+        0,
+        0.10452846326765332,
+        0,
+        0.9945218953682733
+      ],
+      "scale": [
+        0.3000000000000001,
+        0.3000000000000001,
+        0.3000000000000001
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "e605eeda-0f4d-4839-bf87-9650e90ae818": {
+          "id": "e605eeda-0f4d-4839-bf87-9650e90ae818",
+          "name": "PlayPauseButtonController",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 120,
+        "height": 78,
+        "image": {
+          "type": "asset",
+          "asset": "assets/play.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain",
+        "ignoreRaycast": true
+      },
+      "name": "PlayPauseButton",
+      "order": 7.662121267141247
     }
   },
   "spaces": {
