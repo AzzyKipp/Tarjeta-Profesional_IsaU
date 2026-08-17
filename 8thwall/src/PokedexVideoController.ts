@@ -88,24 +88,27 @@ ecs.registerComponent({
           // VIDEO DEL INSPECTOR
           // =========================
 
-         const video = videoTexture?.source?.data
+      const video = videoTexture?.source?.data
 
-          if (!video) {
-            console.error(
-              '❌ No se encontró un video seleccionado en el material Screen'
-            )
-            return
-          }
+      if (!video) {
+        console.error(
+          '❌ No se encontró un video seleccionado en el material Screen'
+        )
+        return
+      }
 
-          video.addEventListener('loadeddata', () => {
-            console.log('🎬 HTML VIDEO LOADEDDATA')
-          })
+      console.log('🎬 VIDEO ENCONTRADO')
+      console.log('🎥 VIDEO SRC:', video.currentSrc)
+      console.log('🎥 VIDEO READY STATE:', video.readyState)
+      console.log('🎥 VIDEO NETWORK STATE:', video.networkState)
 
-          video.addEventListener('canplaythrough', () => {
-            console.log('🎬 HTML VIDEO CANPLAYTHROUGH')
-          })
+      video.addEventListener('loadeddata', () => {
+        console.log('🎬 HTML VIDEO LOADEDDATA')
+      })
 
-          console.log('🎬 VIDEO ENCONTRADO')
+      video.addEventListener('canplaythrough', () => {
+        console.log('🎬 HTML VIDEO CANPLAYTHROUGH')
+      })
         })
       }
     )
