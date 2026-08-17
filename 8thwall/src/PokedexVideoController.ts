@@ -5,86 +5,101 @@ ecs.registerComponent({
 
   schema: {},
 
-add: (world, component) => {
-  const videoControls = ecs.VideoControls.get(world, component.eid)
+  add: (world, component) => {
+    const videoControls = ecs.VideoControls.get(world, component.eid)
 
-  console.log('🎮 VideoControls:', videoControls)
+    console.log('🎮 VideoControls:', videoControls)
 
-  ecs.VideoControls.set(world, component.eid, {
-    paused: true,
-  })
+    ecs.VideoControls.set(world, component.eid, {
+      paused: true,
+    })
+
     // =========================
-  // CARGAR POKÉDEX
-  // =========================
+    // CARGAR POKÉDEX
+    // =========================
 
-  ecs.GltfModel.set(world, component.eid, {
-    url: './assets/pokedex.glb',
-  })
+    ecs.GltfModel.set(world, component.eid, {
+      url: './assets/pokedex.glb',
+    })
 
-    const object3D = world.three.entityToObject.get(component.eid)
+    // =========================
+    // ESPERAR A QUE CARGUE EL GLB
+    // =========================
 
-    // Esperar a que el GLB termine de cargar
-    setTimeout(() => {
-      object3D?.traverse((child: any) => {
-        if (!child.isMesh) return
-        if (child.material?.name !== 'Screen') return
+    world.events.addListener(
+      component.eid,
+      ecs.events.GLTF_MODEL_LOADED,
+      (event: any) => {
+        console.log('🎯 POKÉDEX CARGADA')
 
-        const material = child.material
+        const object3D = event.data.model
 
-        // =========================
-        // COLOR DEL MATERIAL
-        // =========================
+        object3D?.traverse((child: any) => {
+          if (!child.isMesh) return
+          if (child.material?.name !== 'Screen') return
 
-        material.color.set(0xffffff)
-        material.needsUpdate = true
+          const material = child.material
 
-        // =========================
-        // UV DE SCREEN
-        // =========================
+          // =========================
+          // COLOR DEL MATERIAL
+          // =========================
 
-        const uv = child.geometry.attributes.uv
+          material.color.set(0xffffff)
+          material.needsUpdate = true
 
-        if (uv) {
-          for (let i = 0; i < uv.count; i++) {
-            const u = uv.getX(i)
-            const v = uv.getY(i)
+          // =========================
+          // UV DE SCREEN
+          // =========================
 
-            const newU =
-              (u - 0.1342474371) /
-              (0.1637316048 - 0.1342474371)
+          const uv = child.geometry.attributes.uv
 
-            const newV =
-              (v - 0.9472728968) /
-              (0.9855647087 - 0.9472728968)
+          if (uv) {
+            for (let i = 0; i < uv.count; i++) {
+              const u = uv.getX(i)
+              const v = uv.getY(i)
 
-            uv.setXY(i, newU, newV)
+              const newU =
+                (u - 0.1342474371) /
+                (0.1637316048 - 0.1342474371)
+
+              const newV =
+                (v - 0.9472728968) /
+                (0.9855647087 - 0.9472728968)
+
+              uv.setXY(i, newU, newV)
+            }
+
+            uv.needsUpdate = true
           }
 
-          uv.needsUpdate = true
-        }
+          // =========================
+          // ROTACIÓN DEL VIDEO
+          // =========================
 
-        // =========================
-        // VIDEO DEL INSPECTOR
-        // =========================
+          const videoTexture = material.map
 
-        const videoTexture = material.map
-              if (videoTexture) {
-        videoTexture.center.set(0.5, 0.5)
-        videoTexture.rotation = -Math.PI / 2
-        videoTexture.needsUpdate = true
+          if (videoTexture) {
+            videoTexture.center.set(0.5, 0.5)
+            videoTexture.rotation = -Math.PI / 2
+            videoTexture.needsUpdate = true
+          }
+
+          // =========================
+          // VIDEO DEL INSPECTOR
+          // =========================
+
+          const video = videoTexture?.source?.data
+
+          if (!video) {
+            console.error(
+              '❌ No se encontró un video seleccionado en el material Screen'
+            )
+            return
+          }
+
+          console.log('🎬 VIDEO ENCONTRADO')
+        })
       }
-        const video = videoTexture?.source?.data
-        const videoControls = ecs.VideoControls.get(world, component.eid)
-        
-        if (!video) {
-          console.error(
-            '❌ No se encontró un video seleccionado en el material Screen'
-          )
-          return
-        }
-
-        // Reproducir el video seleccionado desde el Inspector
-      })
-    }, 2000)
+    )
   },
 })
