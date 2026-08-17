@@ -84,9 +84,6 @@ add: (world, component) => {
         }
 
         // Reproducir el video seleccionado desde el Inspector
-        video.play().catch((error: any) => {
-          console.error('❌ No se pudo reproducir el video:', error)
-        })
       })
     }, 2000)
   },
