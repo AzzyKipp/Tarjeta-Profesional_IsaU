@@ -120,6 +120,11 @@
           "id": "b9c3a101-5be0-4033-a02d-bdebd02f9947",
           "name": "AnimationStateController",
           "parameters": {}
+        },
+        "a1b764ad-718f-4854-b4aa-1a0a35261f7c": {
+          "id": "a1b764ad-718f-4854-b4aa-1a0a35261f7c",
+          "name": "ExternalURLController",
+          "parameters": {}
         }
       },
       "gltfModel": {
@@ -193,22 +198,22 @@
     "0e837f27-f352-4aea-9d12-8bb3ca481c8b": {
       "id": "0e837f27-f352-4aea-9d12-8bb3ca481c8b",
       "position": [
-        -0.023457705317441735,
-        2.8651705181402125,
-        -4.058375040431877
+        0.2764319372466608,
+        4.058375040431878,
+        2.8651705181402116
       ],
       "rotation": [
-        0,
-        -0.6156614753256598,
-        0,
-        0.7880107536067207
+        0.5572077475232338,
+        -0.43533840411808855,
+        -0.43533840411808844,
+        0.5572077475232339
       ],
       "scale": [
-        1.0000000000000027,
+        1.0000000000000024,
         1,
-        1.0000000000000027
+        1.0000000000000024
       ],
-      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "parentId": "505541f4-dc71-4160-bff3-8aefbcc078f1",
       "components": {
         "8b6128a7-f274-4edc-81db-838d98916c07": {
           "id": "8b6128a7-f274-4edc-81db-838d98916c07",
@@ -227,32 +232,33 @@
         "loop": true
       },
       "name": "pokedex.glb",
-      "order": 6.511694782741002,
+      "order": 7.876032514083894,
       "videoControls": {
-        "positional": false
+        "positional": false,
+        "loop": true
       }
     },
     "f8594c55-5d85-4f56-89e9-081a6bbe393d": {
       "id": "f8594c55-5d85-4f56-89e9-081a6bbe393d",
       "position": [
-        -0.8163225597059953,
-        2.1994107529421725,
-        -3.835074939929705
+        -0.5164329171418921,
+        3.8350749399297044,
+        2.1994107529421716
       ],
       "rotation": [
-        0,
-        0.13052619222005177,
-        0,
-        0.9914448613738104
+        0.7010573846499778,
+        0.0922959556412574,
+        0.09229595564125737,
+        0.7010573846499779
       ],
       "scale": [
-        1.100000000000001,
+        1.1000000000000005,
         1.1000000000000008,
-        1.100000000000001
+        1.1000000000000005
       ],
       "geometry": null,
       "material": null,
-      "parentId": "79afa610-0c1b-460a-b013-66f0195d3b2c",
+      "parentId": "505541f4-dc71-4160-bff3-8aefbcc078f1",
       "components": {},
       "ui": {
         "type": "3d",
@@ -269,7 +275,7 @@
         "stackingOrder": 1
       },
       "name": "PlayPauseButton",
-      "order": 7.978705376477635
+      "order": 9.551161243102989
     },
     "26e3ad1e-78cd-4bb6-abc1-d791fbcf02f1": {
       "id": "26e3ad1e-78cd-4bb6-abc1-d791fbcf02f1",
@@ -384,6 +390,88 @@
       "name": "CualquierEmpty",
       "order": 10.848583485513352,
       "disabled": true
+    },
+    "3c0e24c3-558a-4f4f-bd0f-3f8327aabf7e": {
+      "id": "3c0e24c3-558a-4f4f-bd0f-3f8327aabf7e",
+      "position": [
+        -4.558649201868159,
+        1.4449550250064087,
+        -5.9862500039380375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "831b7112-009d-4a75-b624-65a01f513d8e": {
+          "id": "831b7112-009d-4a75-b624-65a01f513d8e",
+          "name": "ExternalURLController",
+          "parameters": {
+            "url": "https://www.google.com"
+          }
+        }
+      },
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/whatsapp.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "whatsapp.glb",
+      "order": 12.788006409035996
+    },
+    "fc4508d1-173e-4014-a32d-da9bb887192c": {
+      "id": "fc4508d1-173e-4014-a32d-da9bb887192c",
+      "position": [
+        1.8405460402932026,
+        1.4449550250064078,
+        -5.932995096112149
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "632c8565-ad08-45c3-8a97-203193a64f8e": {
+          "id": "632c8565-ad08-45c3-8a97-203193a64f8e",
+          "name": "ExternalURLController",
+          "parameters": {
+            "url": "https://www.google.com"
+          }
+        }
+      },
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/instagram.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "instagram.glb",
+      "order": 13.793830979669119
     }
   },
   "spaces": {

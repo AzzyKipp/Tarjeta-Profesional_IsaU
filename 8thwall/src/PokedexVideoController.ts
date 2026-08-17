@@ -52,10 +52,7 @@ ecs.registerComponent({
 
         THREE.BufferGeometryUtils.deinterleaveGeometry(child.geometry)
 
-        console.log(
-          '🧪 THREE.BufferGeometryUtils:',
-          THREE.BufferGeometryUtils
-        )
+
 // =========================
 // MATERIAL DE PRUEBA
 // =========================
@@ -144,6 +141,11 @@ ecs.registerComponent({
 
           video.src = './assets/hellyeah.mp4'
           video.load()
+          video.pause()
+
+          ecs.VideoControls.set(world, component.eid, {
+            paused: true,
+          })
         })
       }
     )
