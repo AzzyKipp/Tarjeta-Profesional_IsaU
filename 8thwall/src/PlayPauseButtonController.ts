@@ -3,17 +3,57 @@ import * as ecs from '@8thwall/ecs'
 ecs.registerComponent({
   name: 'PlayPauseButtonController',
 
-  schema: {},
+  schema: {
+    button: ecs.eid,
+    videoController: ecs.eid,
+    icon: ecs.eid,
+  },
 
-  add: (world, component) => {
-    console.log('🎮 PlayPauseButton listo')
+  stateMachine: ({world, eid, schemaAttribute}) => {
+    ecs.defineState('default')
+      .initial()
+      .listen(
+        schemaAttribute.get(eid).button,
+        ecs.input.UI_CLICK,
+        () => {
+          console.log('🔥 CLICK DEL BOTÓN DETECTADO')
 
-    world.events.addListener(
-      component.eid,
-      ecs.input.SCREEN_TOUCH_START,
-      () => {
-        console.log('🟢 BOTÓN PRESIONADO')
-      }
-    )
+          const data = schemaAttribute.get(eid)
+
+          const controls = ecs.VideoControls.get(
+            world,
+            data.videoController
+          )
+
+          ecs.VideoControls.mutate(
+            world,
+            data.videoController,
+            (cursor) => {
+              cursor.paused = !cursor.paused
+              return false
+            }
+          )
+
+          const paused = ecs.VideoControls.get(
+            world,
+            data.videoController
+          ).paused
+
+          console.log('🎮 PAUSED:', paused)
+
+          ecs.Ui.mutate(world, data.icon, (cursor) => {
+            cursor.image = paused
+              ? 'assets/play.png'
+              : 'assets/pause.png'
+
+            return false
+          })
+
+          console.log(
+            '🖼️ ICONO:',
+            ecs.Ui.get(world, data.icon).image
+          )
+        }
+      )
   },
 })

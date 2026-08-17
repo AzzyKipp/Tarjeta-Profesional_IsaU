@@ -232,48 +232,158 @@
         "positional": false
       }
     },
-    "ecc43834-f386-45b7-b4cf-ca69ba04873b": {
-      "id": "ecc43834-f386-45b7-b4cf-ca69ba04873b",
+    "f8594c55-5d85-4f56-89e9-081a6bbe393d": {
+      "id": "f8594c55-5d85-4f56-89e9-081a6bbe393d",
       "position": [
-        -0.8161445847317974,
-        2.1940520840876996,
-        -3.8430364607047185
+        -0.8163225597059953,
+        2.1994107529421725,
+        -3.835074939929705
       ],
       "rotation": [
         0,
-        0.10452846326765332,
+        0.13052619222005177,
         0,
-        0.9945218953682733
+        0.9914448613738104
       ],
       "scale": [
-        0.3000000000000001,
-        0.3000000000000001,
-        0.3000000000000001
+        1.100000000000001,
+        1.1000000000000008,
+        1.100000000000001
       ],
       "geometry": null,
       "material": null,
-      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
-      "components": {
-        "e605eeda-0f4d-4839-bf87-9650e90ae818": {
-          "id": "e605eeda-0f4d-4839-bf87-9650e90ae818",
-          "name": "PlayPauseButtonController",
-          "parameters": {}
-        }
-      },
+      "parentId": "79afa610-0c1b-460a-b013-66f0195d3b2c",
+      "components": {},
       "ui": {
         "type": "3d",
-        "width": 120,
-        "height": 78,
+        "width": 34,
+        "height": 11,
+        "background": "#ad50ff",
+        "borderRadius": 0,
+        "flexDirection": "row",
+        "backgroundOpacity": 0,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "stackingOrder": 1
+      },
+      "name": "PlayPauseButton",
+      "order": 7.978705376477635
+    },
+    "26e3ad1e-78cd-4bb6-abc1-d791fbcf02f1": {
+      "id": "26e3ad1e-78cd-4bb6-abc1-d791fbcf02f1",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "f8594c55-5d85-4f56-89e9-081a6bbe393d",
+      "components": {},
+      "name": "Icono",
+      "ui": {
+        "width": 16,
+        "height": 16,
         "image": {
           "type": "asset",
           "asset": "assets/play.png"
         },
         "backgroundOpacity": 1,
         "backgroundSize": "contain",
-        "ignoreRaycast": true
+        "stackingOrder": 0,
+        "ignoreRaycast": false
       },
-      "name": "PlayPauseButton",
-      "order": 7.662121267141247
+      "order": 0.19349682222489933
+    },
+    "79afa610-0c1b-460a-b013-66f0195d3b2c": {
+      "id": "79afa610-0c1b-460a-b013-66f0195d3b2c",
+      "position": [
+        2.220446049250313e-16,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -2.775557561562892e-17,
+        0,
+        1
+      ],
+      "scale": [
+        0.9999999999999999,
+        1,
+        0.9999999999999999
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "0f4f47af-9488-4d77-9527-8d8852166d96": {
+          "id": "0f4f47af-9488-4d77-9527-8d8852166d96",
+          "name": "PlayPauseButtonController",
+          "parameters": {
+            "button": {
+              "type": "entity",
+              "id": "f8594c55-5d85-4f56-89e9-081a6bbe393d"
+            },
+            "videoController": {
+              "type": "entity",
+              "id": "0e837f27-f352-4aea-9d12-8bb3ca481c8b"
+            },
+            "icon": {
+              "type": "entity",
+              "id": "26e3ad1e-78cd-4bb6-abc1-d791fbcf02f1"
+            }
+          }
+        }
+      },
+      "name": "PlayPauseController",
+      "order": 9.193797721962255,
+      "videoControls": {}
+    },
+    "438edd31-8dcd-4002-979c-78f28ee9f7cb": {
+      "id": "438edd31-8dcd-4002-979c-78f28ee9f7cb",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "8cd2458d-7cbd-4343-b565-5c9414279250": {
+          "id": "8cd2458d-7cbd-4343-b565-5c9414279250",
+          "name": "InputTest",
+          "parameters": {}
+        }
+      },
+      "name": "CualquierEmpty",
+      "order": 10.848583485513352,
+      "disabled": true
     }
   },
   "spaces": {
