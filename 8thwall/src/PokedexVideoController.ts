@@ -12,7 +12,7 @@ ecs.registerComponent({
   },
 
   schemaDefaults: {
-    video: './assets/hellyeah.mp4',
+    video: './assets/video_olas.mp4',
   },
 
   // =========================
@@ -46,8 +46,33 @@ ecs.registerComponent({
           if (!child.isMesh) return
           if (child.material?.name !== 'Screen') return
 
-          const material = child.material
+        const material = child.material
 
+        const {THREE} = window as any
+
+        THREE.BufferGeometryUtils.deinterleaveGeometry(child.geometry)
+
+        console.log(
+          '🧪 THREE.BufferGeometryUtils:',
+          THREE.BufferGeometryUtils
+        )
+// =========================
+// MATERIAL DE PRUEBA
+// =========================
+
+          const videoTexture = material.map
+
+          if (!videoTexture) {
+            console.error('❌ No existe VideoTexture en Screen')
+            return
+          }
+
+          
+
+          child.material = new THREE.MeshBasicMaterial({
+            map: videoTexture,
+            color: 0xffffff,
+          })
           // =========================
           // MATERIAL
           // =========================
@@ -86,7 +111,7 @@ ecs.registerComponent({
           // VIDEO TEXTURE
           // =========================
 
-          const videoTexture = material.map
+
 
           if (!videoTexture) {
             console.error('❌ No existe VideoTexture en Screen')
@@ -128,16 +153,5 @@ ecs.registerComponent({
   // VIDEO DEL INSPECTOR
   // =========================
 
-  stateMachine: ({world, eid, schemaAttribute}) => {
-    ecs.defineState('default')
-      .initial()
-      .onEnter(() => {
-        const data = schemaAttribute.get(eid)
 
-        console.log(
-          '🎥 VIDEO DEL INSPECTOR:',
-          data.video
-        )
-      })
-  },
 })

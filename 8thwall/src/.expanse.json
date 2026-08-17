@@ -214,7 +214,7 @@
           "id": "8b6128a7-f274-4edc-81db-838d98916c07",
           "name": "PokedexVideoController",
           "parameters": {
-            "video": "./assets/hellyeah.mp4"
+            "video": "./assets/video_olas.mp4"
           }
         }
       },
