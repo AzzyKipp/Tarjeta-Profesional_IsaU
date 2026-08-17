@@ -4,7 +4,7 @@ ecs.registerComponent({
   name: 'PokedexVideoController',
 
   // =========================
-  // CONFIGURACIÓN DEL COMPONENTE
+  // CONFIGURACIÓN
   // =========================
 
   schema: {
@@ -22,18 +22,12 @@ ecs.registerComponent({
   add: (world, component) => {
     console.log('🚀 PokedexVideoController iniciado')
 
-    const videoControls = ecs.VideoControls.get(world, component.eid)
-
-    console.log('🎮 VideoControls:', videoControls)
-
+    // Video comienza pausado
     ecs.VideoControls.set(world, component.eid, {
       paused: true,
     })
 
-    // =========================
-    // CARGAR POKÉDEX
-    // =========================
-
+    // Cargar modelo
     ecs.GltfModel.set(world, component.eid, {
       url: './assets/pokedex.glb',
     })
@@ -46,20 +40,16 @@ ecs.registerComponent({
       component.eid,
       ecs.events.GLTF_MODEL_LOADED,
       (event: any) => {
-        console.log('🎯 POKÉDEX CARGADA')
-
         const object3D = event.data.model
 
         object3D?.traverse((child: any) => {
           if (!child.isMesh) return
           if (child.material?.name !== 'Screen') return
 
-          console.log('🖥️ ENCONTRAMOS SCREEN')
-
           const material = child.material
 
           // =========================
-          // COLOR DEL MATERIAL
+          // MATERIAL
           // =========================
 
           material.color.set(0xffffff)
@@ -87,6 +77,8 @@ ecs.registerComponent({
               uv.setXY(i, newU, newV)
             }
 
+            
+
             uv.needsUpdate = true
           }
 
@@ -96,70 +88,44 @@ ecs.registerComponent({
 
           const videoTexture = material.map
 
-          if (videoTexture) {
-            videoTexture.center.set(0.5, 0.5)
-            videoTexture.rotation = -Math.PI / 2
-            videoTexture.needsUpdate = true
-          }
-
-          // =========================
-          // VIDEO DEL MATERIAL
-          // =========================
-
-          const video = videoTexture?.source?.data
-
-          if (!video) {
-            console.error(
-              '❌ No se encontró un video seleccionado en el material Screen'
-            )
+          if (!videoTexture) {
+            console.error('❌ No existe VideoTexture en Screen')
             return
           }
 
-          console.log('🎬 VIDEO ENCONTRADO')
+          videoTexture.offset.set(0, 0)
+          videoTexture.repeat.set(1, 1)
+          videoTexture.center.set(0.5, 0.5)
+
+          videoTexture.rotation = -Math.PI / 2
+          videoTexture.flipY = true
+
+          videoTexture.needsUpdate = true
 
           // =========================
-          // PRUEBA DE FUENTE DEL VIDEO
+          // VIDEO
+          // =========================
+
+          const video = videoTexture.source?.data
+
+          if (!video) {
+            console.error('❌ No se encontró el elemento HTMLVideo')
+            return
+          }
+
+          // =========================
+          // FUENTE DEL VIDEO
           // =========================
 
           video.src = './assets/hellyeah.mp4'
           video.load()
-
-          console.log('🎥 NUEVA FUENTE:', video.src)
-
-
-          console.log(
-            '🎥 VIDEO SRC:',
-            video.currentSrc
-          )
-
-          console.log(
-            '🎥 VIDEO READY STATE:',
-            video.readyState
-          )
-
-          console.log(
-            '🎥 VIDEO NETWORK STATE:',
-            video.networkState
-          )
-
-          // =========================
-          // EVENTOS DEL VIDEO
-          // =========================
-
-          video.addEventListener('loadeddata', () => {
-            console.log('🎬 HTML VIDEO LOADEDDATA')
-          })
-
-          video.addEventListener('canplaythrough', () => {
-            console.log('🎬 HTML VIDEO CANPLAYTHROUGH')
-          })
         })
       }
     )
   },
 
   // =========================
-  // LEER VIDEO DEL INSPECTOR
+  // VIDEO DEL INSPECTOR
   // =========================
 
   stateMachine: ({world, eid, schemaAttribute}) => {
