@@ -88,7 +88,7 @@ ecs.registerComponent({
           // VIDEO DEL INSPECTOR
           // =========================
 
-          const video = videoTexture?.source?.data
+         const video = videoTexture?.source?.data
 
           if (!video) {
             console.error(
@@ -96,6 +96,14 @@ ecs.registerComponent({
             )
             return
           }
+
+          video.addEventListener('loadeddata', () => {
+            console.log('🎬 HTML VIDEO LOADEDDATA')
+          })
+
+          video.addEventListener('canplaythrough', () => {
+            console.log('🎬 HTML VIDEO CANPLAYTHROUGH')
+          })
 
           console.log('🎬 VIDEO ENCONTRADO')
         })
