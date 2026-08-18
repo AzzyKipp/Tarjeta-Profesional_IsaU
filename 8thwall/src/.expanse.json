@@ -120,11 +120,6 @@
           "id": "b9c3a101-5be0-4033-a02d-bdebd02f9947",
           "name": "AnimationStateController",
           "parameters": {}
-        },
-        "a1b764ad-718f-4854-b4aa-1a0a35261f7c": {
-          "id": "a1b764ad-718f-4854-b4aa-1a0a35261f7c",
-          "name": "ExternalURLController",
-          "parameters": {}
         }
       },
       "gltfModel": {
@@ -137,7 +132,7 @@
         "paused": false
       },
       "name": "AvatarAnimada.glb",
-      "order": 5.968480032024043
+      "order": 1.1636533830614213
     },
     "f0edf0f2-d8f5-4dee-9723-ca738dc516a5": {
       "id": "f0edf0f2-d8f5-4dee-9723-ca738dc516a5",
@@ -198,9 +193,9 @@
     "0e837f27-f352-4aea-9d12-8bb3ca481c8b": {
       "id": "0e837f27-f352-4aea-9d12-8bb3ca481c8b",
       "position": [
-        0.2764319372466608,
-        4.058375040431878,
-        2.8651705181402116
+        -0.18403522257486754,
+        1.689899681595225,
+        1.3171823823346611
       ],
       "rotation": [
         0.5572077475232338,
@@ -241,20 +236,20 @@
     "f8594c55-5d85-4f56-89e9-081a6bbe393d": {
       "id": "f8594c55-5d85-4f56-89e9-081a6bbe393d",
       "position": [
-        -0.5164329171418921,
-        3.8350749399297044,
-        2.1994107529421716
+        -0.9769000769634204,
+        1.4665995810930517,
+        0.6514226171366212
       ],
       "rotation": [
         0.7010573846499778,
-        0.0922959556412574,
-        0.09229595564125737,
+        0.09229595564125745,
+        0.09229595564125732,
         0.7010573846499779
       ],
       "scale": [
         1.1000000000000005,
-        1.1000000000000008,
-        1.1000000000000005
+        1.0999999999999999,
+        1.0999999999999996
       ],
       "geometry": null,
       "material": null,
@@ -394,30 +389,30 @@
     "3c0e24c3-558a-4f4f-bd0f-3f8327aabf7e": {
       "id": "3c0e24c3-558a-4f4f-bd0f-3f8327aabf7e",
       "position": [
-        -3.4588623422702423,
-        1.4449550250064087,
-        -5.9862500039380375
+        1.972810874642434,
+        -4.509067761840875,
+        1.4449550250064098
       ],
       "rotation": [
-        0,
-        0,
-        0,
-        1
+        0.03700710955926823,
+        0.7061377159181262,
+        0.7061377159181262,
+        0.03700710955926823
       ],
       "scale": [
-        1,
-        1,
-        1
+        1.0000000000000064,
+        0.9999999999999999,
+        1.0000000000000064
       ],
       "geometry": null,
       "material": null,
-      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "parentId": "505541f4-dc71-4160-bff3-8aefbcc078f1",
       "components": {
         "831b7112-009d-4a75-b624-65a01f513d8e": {
           "id": "831b7112-009d-4a75-b624-65a01f513d8e",
           "name": "ExternalURLController",
           "parameters": {
-            "url": "https://www.google.com"
+            "url": "https://api.whatsapp.com/send/?phone=573012967434&text&type=phone_number&app_absent=0"
           }
         }
       },
@@ -430,35 +425,35 @@
         "loop": true
       },
       "name": "whatsapp.glb",
-      "order": 12.788006409035996
+      "order": 3.747260706032282
     },
     "fc4508d1-173e-4014-a32d-da9bb887192c": {
       "id": "fc4508d1-173e-4014-a32d-da9bb887192c",
       "position": [
-        1.8405460402932026,
-        1.4449550250064078,
-        -5.932995096112149
+        2.988123038712369,
+        -2.061100216936171,
+        1.4449550250064083
       ],
       "rotation": [
-        0,
-        0,
-        0,
-        1
+        -0.32101976096010226,
+        0.630036755335051,
+        0.6300367553350508,
+        -0.3210197609601024
       ],
       "scale": [
+        1.0000000000000069,
         1,
-        1,
-        1
+        1.0000000000000069
       ],
       "geometry": null,
       "material": null,
-      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "parentId": "505541f4-dc71-4160-bff3-8aefbcc078f1",
       "components": {
         "632c8565-ad08-45c3-8a97-203193a64f8e": {
           "id": "632c8565-ad08-45c3-8a97-203193a64f8e",
           "name": "ExternalURLController",
           "parameters": {
-            "url": "https://www.google.com"
+            "url": "https://www.instagram.com/azzy_sleepyhead/"
           }
         }
       },
@@ -471,7 +466,48 @@
         "loop": true
       },
       "name": "instagram.glb",
-      "order": 13.793830979669119
+      "order": 4.0525655375302225
+    },
+    "966edc86-068f-468c-86cb-9397b50b0ed2": {
+      "id": "966edc86-068f-468c-86cb-9397b50b0ed2",
+      "position": [
+        -5.8637264364870125,
+        -0.4771502135143041,
+        1.493649564862201
+      ],
+      "rotation": [
+        0.24184476264797508,
+        0.6644630243886749,
+        0.6644630243886747,
+        0.24184476264797514
+      ],
+      "scale": [
+        1.0000000000000016,
+        1,
+        1.0000000000000016
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "505541f4-dc71-4160-bff3-8aefbcc078f1",
+      "components": {
+        "a6ea2ace-0c53-4810-839f-e7c3ae636131": {
+          "id": "a6ea2ace-0c53-4810-839f-e7c3ae636131",
+          "name": "ExternalURLController",
+          "parameters": {
+            "url": "mailto:isabellaurrego@gmail.com?subject=Estoy%20interesad@%20en%20conocer%20m%C3%A1s%20sobre%20tus%20servicios&body=%C2%A1Agendemos%20una%20asesor%C3%ADa%20para%20hacer%20mi%20proyecto%20realidad!"
+          }
+        }
+      },
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/gmail.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "gmail.glb",
+      "order": 4.357870369028163
     }
   },
   "spaces": {
