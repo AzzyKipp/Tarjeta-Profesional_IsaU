@@ -139,7 +139,7 @@ ecs.registerComponent({
           // FUENTE DEL VIDEO
           // =========================
 
-          video.src = './assets/hellyeah.mp4'
+          video.src = './assets/PRESENTANDO.mp4'
           video.load()
           video.pause()
 
