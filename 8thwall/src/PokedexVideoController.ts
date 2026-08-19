@@ -12,7 +12,7 @@ ecs.registerComponent({
   },
 
   schemaDefaults: {
-    video: './assets/video_olas.mp4',
+    video: './assets/PRESENTANDO.mp4',
   },
 
   // =========================
